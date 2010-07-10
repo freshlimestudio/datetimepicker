@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title>Date Format Converions</title>
+    <style type="text/css">
+      /* css for timepicker */
+      .labels {
+        text-align: left;
+        font-size: 11px;
+      }
+      .content td {
+      }
+      .ruby, .fd {
+        padding-left: 15px;
+        text-align: left;
+        font-weight:bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Date Format Converions</h1>
+    <b>Year:</b><br />
+    <table style="width: 100%;">
+      <tr class="labels">
+        <th style="width: 110px;">Ruby</th>
+        <th style="width: 110px;">formatDate</th>
+        <th>Notes</th>
+      </tr>
+      <tr class="content">
+        <td class="ruby">%y</td>
+        <td class="fd">y</td>
+        <td>year (two digit)</td>
+      </tr>
+      <tr class="content">
+        <td class="ruby">%Y</td>
+        <td class="fd">yy</td>
+        <td>year (four digit)</td>
+      </tr>
+      <tr class="content">
+        <td class="ruby">%C</td>
+        <td class="fd">none</td>
+        <td>century number (year divided by 100) 20</td>
+      </tr>
+    </table><br />
+
+    <b>Month:</b><br />
+    <table style="width: 100%;">
+      <tr class="labels">
+        <th style="width: 110px;">Ruby</th>
+        <th style="width: 110px;">formatDate</th>
+        <th>Notes</th>
+      </tr>
+      <tr class="content">
+        <td class="ruby">none</td>
+        <td class="fd">m</td>
+        <td>month of year (no leading zero)</td>
+      </tr>
+      <tr class="content">
+        <td class="ruby">%m</td>
+        <td class="fd">mm</td>
+        <td>month of year (two digit)</td>
+      </tr>
+      <tr class="content">
+        <td class="ruby">%b or %h</td>
+        <td class="fd">M</td>
+        <td>month name short</td>
+      </tr>
+      <tr class="content">
+        <td class="ruby">%B</td>
+        <td class="fd">MM</td>
+        <td>month name long</td>
+      </tr>
+    </table><br />
+
+    <b>Week:</b><br />
+    <table style="width: 100%;">
+      <tr class="labels">
+        <th style="width: 110px;">Ruby</th>
+        <th style="width: 110px;">formatDate</th>
+        <th>Notes</th>
+      </tr>
+      <tr class="content">
+        <td class="ruby">%U</td>
+        <td class="fd">none</td>
+        <td>week number of the year, Sunday as first day of week (00-53)</td>
+      </tr>
+      <tr class="content">
+        <td class="ruby">%W</td>
+        <td class="fd">none</td>
+        <td>week number of the year, Monday as first day of week (00-53)</td>
+      </tr>
+    </table><br />
+
+    <b>Day:</b><br />
+    <table style="width: 100%;">
+      <tr class="labels">
+        <th style="width: 110px;">Ruby</th>
+        <th style="width: 110px;">formatDate</th>
+        <th>Notes</th>
+      </tr>
+      <tr class="content">
+        <td class="ruby">%e</td>
+        <td class="fd">d</td>
+        <td>day of month (no leading zero)</td>
+      </tr>
+      <tr class="content">
+        <td class="ruby">%d</td>
+        <td class="fd">dd</td>
+        <td>day of month (two digit)</td>
+      </tr>
+      <tr class="content">
+        <td class="ruby">none</td>
+        <td class="fd">o</td>
+        <td>day of the year (no leading zeros)</td>
+      </tr>
+      <tr class="content">
+        <td class="ruby">%j</td>
+        <td class="fd">oo</td>
+        <td>day of the year (three digit)</td>
+      </tr>
+      <tr class="content">
+        <td class="ruby">%w</td>
+        <td class="fd">none</td>
+        <td>weekday as a number, with 0 representing Sunday (0-6)</td>
+      </tr>
+      <tr class="content">
+        <td class="ruby">%u</td>
+        <td class="fd">none</td>
+        <td>weekday as a number, with 1 representing Monday (1-7)</td>
+      </tr>
+      <tr class="content">
+        <td class="ruby">%a</td>
+        <td class="fd">D</td>
+        <td>day of week name short</td>
+      </tr>
+      <tr class="content">
+        <td class="ruby">%A</td>
+        <td class="fd">DD</td>
+        <td>day of week name long</td>
+      </tr>
+    </table><br />
+
+    <b>Time:</b><br />
+    <table style="width: 100%;">
+      <tr class="labels">
+        <th style="width: 110px;">Ruby</th>
+        <th style="width: 110px;">formatDate</th>
+        <th>Notes</th>
+      </tr>
+      <tr class="content">
+        <td class="ruby">%H</td>
+        <td class="fd">hh</td>
+        <td>hour (24-hour clock) (00-23)</td>
+      </tr>
+      <tr class="content">
+        <td class="ruby">%k</td>
+        <td class="fd">h</td>
+        <td>hour (24-hour clock); single digits preceded by space ( 0-23)</td>
+      </tr>
+      <tr class="content">
+        <td class="ruby">%I</td>
+        <td class="fd">hh</td>
+        <td>hour (12-hour clock) (01-12)</td>
+      </tr>
+      <tr class="content">
+        <td class="ruby">%l</td>
+        <td class="fd">h</td>
+        <td>hour (12-hour clock); single digits preceded by space ( 1-12)</td>
+      </tr>
+      <tr class="content">
+        <td class="ruby">%M</td>
+        <td class="fd">mm</td>
+        <td>minute (00-59)</td>
+      </tr>
+      <tr class="content">
+        <td class="ruby">none</td>
+        <td class="fd">m</td>
+        <td>minute (0-59)</td>
+      </tr>
+      <tr class="content">
+        <td class="ruby">%S</td>
+        <td class="fd">ss</td>
+        <td>seconds (00-59)</td>
+      </tr>
+      <tr class="content">
+        <td class="ruby">none</td>
+        <td class="fd">s</td>
+        <td>seconds (0-59)</td>
+      </tr>
+      <tr class="content">
+        <td class="ruby">none</td>
+        <td class="fd">t</td>
+        <td>a or p for AM/PM</td>
+      </tr>
+      <tr class="content">
+        <td class="ruby">none</td>
+        <td class="fd">tt</td>
+        <td>A or P for AM/PM</td>
+      </tr>
+      <tr class="content">
+        <td class="ruby">none</td>
+        <td class="fd">T</td>
+        <td>am or pm for AM/PM</td>
+      </tr>
+      <tr class="content">
+        <td class="ruby">%p</td>
+        <td class="fd">TT</td>
+        <td>AM or PM for AM/PM</td>
+      </tr>
+      <tr class="content">
+        <td class="ruby">%Z</td>
+        <td class="fd">none</td>
+        <td>timezone name or abbreviation EDT</td>
+      </tr>
+      <tr class="content">
+        <td class="ruby">%z</td>
+        <td class="fd">none</td>
+        <td>timezone offset from UTC -0400</td>
+      </tr>
+    </table><br />
+  </body>
+</html>

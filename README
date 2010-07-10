@@ -1,0 +1,18 @@
+Datetimepicker
+==========
+
+The calendar plugin is a rails plugin that enables changes the default date and datetime renderers to use next libraries:
+  datepicker (http://docs.jquery.com/UI/Datepicker)
+  timepicker (http://trentrichardson.com/examples/timepicker).
+
+Once you install the plugin, rails will automatically try to render and date or datetime fields using this plugin. However, it won't work properly until you include the necessary javascripts and stylesheets in your layout as follows:
+
+  <%= stylesheet_link_tag "jquery-ui-1.8.custom" %>
+  <style type="text/css">
+    /* css for timepicker */
+    #ui-timepicker-div dl{ text-align: left; }
+    #ui-timepicker-div dl dt{ height: 25px; }
+    #ui-timepicker-div dl dd{ margin: -25px 0 10px 65px; }
+  </style>
+
+  <%= javascript_include_tag "jquery.ui.datepicker.js", "jquery-ui-timepicker-addon.js" %>
